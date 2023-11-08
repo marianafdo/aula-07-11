@@ -14,7 +14,7 @@ srv.get('/contatos/html', (req,res)=>{
     listaHTML= listaHTML + `<li>${contato.nome} - ${contato.email}</li>`    
     }
     listaHTML = listaHTML + `</ul>`;
-    res.html(listaHTML);
+    res.send(listaHTML);
 })
 
 srv.listen(8080, ()=>{
